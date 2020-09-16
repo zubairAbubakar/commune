@@ -1,0 +1,58 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.3.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'com.zlab.commune'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('springCloudVersion', "Hoxton.SR7")
+}
+
+dependencies {
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client',
+					'org.springframework.boot:spring-boot-starter-web',
+					'org.springframework.boot:spring-boot-starter-actuator',
+					'org.springframework.boot:spring-boot-starter-security',
+					'org.springframework.boot:spring-boot-starter-data-jpa',
+					'org.springframework.boot:spring-boot-starter-data-rest',
+					'org.springframework.boot:spring-boot-starter-thymeleaf',
+					'org.springframework.cloud:spring-cloud-starter-config',
+					'org.springframework.cloud:spring-cloud-starter-bus-amqp',
+					'org.springframework.cloud:spring-cloud-starter-openfeign',
+					'org.springframework.cloud:spring-cloud-starter-netflix-hystrix',
+					'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+
+
+	compile group: 'mysql', name: 'mysql-connector-java'
+	compile group: 'javax.validation', name: 'validation-api'
+	compile group: 'com.h2database', name: 'h2'
+	compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.8'
+	compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml'
+	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+
+
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
