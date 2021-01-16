@@ -33,13 +33,14 @@ dependencies {
 
 	compile group: 'mysql', name: 'mysql-connector-java'
 	compile group: 'javax.validation', name: 'validation-api'
-	compile group: 'com.h2database', name: 'h2'
+	//compile group: 'com.h2database', name: 'h2'
 	compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.8'
 	compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml'
 	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 
 
-	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools',
+			'com.h2database:h2'
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

@@ -21,6 +21,10 @@ dependencies {
 			'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client',
 			'org.springframework.cloud:spring-cloud-starter-bus-amqp'
 
+	compile group: 'mysql', name: 'mysql-connector-java'
+
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools',
+				'com.h2database:h2'
 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
