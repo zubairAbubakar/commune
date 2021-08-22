@@ -28,7 +28,7 @@ public class AdController {
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public List<AdResponseModel> userAlbums(@PathVariable String userId) {
+    public List<AdResponseModel> userAds(@PathVariable String userId) {
 
         List<AdResponseModel> adResponse = new ArrayList<>();
         List<AdEntity> ads = adService.getAds(userId);

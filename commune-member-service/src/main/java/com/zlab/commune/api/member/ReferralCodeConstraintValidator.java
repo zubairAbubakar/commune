@@ -1,6 +1,6 @@
-package com.zlab.commune;
+package com.zlab.commune.api.member;
 
-import com.zlab.commune.validation.ReferralCode;
+import com.zlab.commune.api.member.validation.ReferralCode;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

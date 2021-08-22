@@ -20,14 +20,14 @@ public class AdServiceImpl implements AdService {
         ad1.setId(1l);
         ad1.setAdId("adId1");
         ad1.setUserId(userId);
-        ad1.setName("ad 1 name");
-        ad1.setDescription("ad 1 description");
+        ad1.setName("iPhone X");
+        ad1.setDescription("This is iPhone 10");
 
         ad2.setId(2l);
         ad2.setAdId("adId2");
         ad2.setUserId(userId);
-        ad2.setName("ad 2 name");
-        ad2.setDescription("ad 2 description");
+        ad2.setName("2008 Toyota Corolla");
+        ad2.setDescription("Best value for money");
 
         ads.add(ad1);
         ads.add(ad2);

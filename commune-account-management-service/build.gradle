@@ -18,7 +18,7 @@ ext {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web',
-			//'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client',
+			'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client',
 			//'org.springframework.cloud:spring-cloud-starter-bus-amqp',
 			'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
 
