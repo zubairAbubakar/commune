@@ -1,0 +1,29 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.zlab.commune.keycloak'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter',
+			       'org.keycloak:keycloak-core:15.0.2'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// https://mvnrepository.com/artifact/org.keycloak/keycloak-server-spi
+	compileOnly 'org.keycloak:keycloak-server-spi:15.0.2',
+				'org.keycloak:keycloak-services:15.0.2'
+
+}
+
+test {
+	useJUnitPlatform()
+}
